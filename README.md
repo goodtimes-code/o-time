@@ -50,6 +50,8 @@ Edit 'config.json' in your favourite text editor.
 # Build your own plugin
 You may provide new plugins to support more output types (like DMX, ArtNet, video playback, more laser DACs...).
 
+Contact service@goodtimes.technology for custom commercial features.
+
 Have a look at the very simple built-in audio receiver plugin in 'clip_receivers/core_audio/receiver.py'. The play() and stop() method will be fired automatically at the given playback time.
 
 Add your customer receiver (ideas: ArtNet/DMX output, video playback,...) with this file structure:
@@ -70,4 +72,4 @@ Add a new clip to 'config.json' to send clip events at the given time to your cu
         - Just one laser preview window possible at the same time
 
 # Support
-Get help by the community for free or contact service@o-33.de for commercial support plans.
+Get help by the community for free or contact service@goodtimes.technology for commercial support plans.
