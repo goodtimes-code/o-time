@@ -6,14 +6,14 @@ Watch a demo video here: https://youtu.be/FjxbE_0uRM8
 
 # Technical features
 - Media types
- - Laser
-    - Multiple output devices (DACs) supported
-    - Support for Helios DAC built-in
-    - Laser objects:
-        - Line
-        - Circle
-        - Wave (static and moving)
-        - SVG
+    - Laser
+        - Multiple output devices (DACs) supported
+        - Support for Helios DAC built-in
+        - Laser objects:
+            - Line
+            - Circle
+            - Wave (static and moving)
+            - SVG
     - Configuration parameters:
         - Blank point frames
         - Interpolated points
@@ -23,6 +23,7 @@ Watch a demo video here: https://youtu.be/FjxbE_0uRM8
         - Color (R, G, B)
         - Rotation angle
         - Visible dots
+        - Size
  - Audio
     - MP3
         - Configuration parameters:
@@ -46,9 +47,9 @@ Edit 'config.json' in your favourite text editor.
 
 # Web GUI
 - Start web GUI to see the clip timeline in a graphical manner:
- - Run `cd core_webgui`
- - Run `./start.sh`
- - Open http://localhost:5000 in your favourite browser.
+    - Run `cd core_webgui`
+    - Run `./start.sh`
+    - Open http://localhost:5000 in your favourite browser.
 
 # Build your own plugin
 You may provide new plugins to support more output types (like DMX, ArtNet, video playback, more laser DACs...).
@@ -59,8 +60,8 @@ Have a look at the very simple built-in audio receiver plugin in 'clip_receivers
 
 Add your customer receiver (ideas: ArtNet/DMX output, video playback,...) with this file structure:
 - clip_receivers
- - <plugin_name>
-    receiver.py
+    - <plugin_name>
+        receiver.py
 
 Add your new reciever to the 'receivers' section within config.json to make it startup automatically.
 Add a new clip to 'config.json' to send clip events at the given time to your custom reciever name.
