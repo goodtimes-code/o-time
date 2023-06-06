@@ -73,7 +73,7 @@ Add a new clip to 'config.json' to send clip events at the given time to your cu
     - Configurations is done via text editor only ("config.json"). The webbased GUI is readonly -> Build a visual editor
 - core_laser_group:
     - Flickering output when using multiple complex laser objects -> optimize paths
-    - Only support for Helios Laser DAC built-in -> implement other laser DACs like Showtacle Moncha, Pangolin FB3/FB4, EasyLase,...
+    - Only support for Helios Laser DAC built-in -> implement other laser DACs like Showtacle Moncha, Pangolin FB3/FB4, EasyLase, EtherDream, LaserDock/LaserCube/LaserOS,...
     - laser_preview:
         - Just one laser preview window possible at the same time
 
