@@ -1,0 +1,30 @@
+/* styles.css */
+
+.timeline-container {
+  position: relative;
+  margin-top: 50px;
+}
+
+.timeline {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #ccc;
+}
+
+.clip {
+  fill: #808080;
+}
+
+.clip-name {
+  font-size: 12px;
+  fill: #000;
+  dominant-baseline: middle;
+}
+
+.clip:hover {
+  opacity: 1;
+}

@@ -1,0 +1,7 @@
+git+https://github.com/chaimleib/intervaltree
+playsound
+redis
+pygame
+numpy
+svgpathtools
+flask

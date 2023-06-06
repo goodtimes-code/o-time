@@ -1,0 +1,1196 @@
+{
+    "server": {
+        "host": "localhost",
+        "db": "0",
+        "password": "",
+        "port": 6379
+    },
+    "timeline": {
+        "position": 1
+    },
+    "laser_preview": {
+        "group_id": "laser_group1",
+        "laser_point_size": 2,
+        "screen_scale_factor": 0.17,
+        "height": 4095,
+        "width": 4095,
+        "screen_update_sleep": 0
+    },
+    "receivers": [
+        {
+            "id": "audio1",
+            "title": "Audio internal",
+            "type": "core_audio",
+            "receiver_parameters": {
+                "path": "demo.mp3",
+                "volume": 0.8
+            }
+        },
+        {
+            "id": "laser_group1",
+            "title": "Laser group 1",
+            "type": "core_laser_group",
+            "receiver_parameters": {
+                "group_id": "laser_group1",
+                "height": 4095,
+                "width": 4095,
+                "blank_point_frames": 80,
+                "interpolated_points": 50,
+                "laser_output_sleep": 0
+            }
+        },
+        {
+            "id": "laser1",
+            "title": "Laser output 1 (Helios DAC)",
+            "type": "core_laser_helios",
+            "receiver_parameters": {
+                "group_id": "laser_group1",
+                "device_id": 1,
+                "scan_rate": 35000,
+                "intensity_factor": 0.18
+            }
+        }
+    ],
+    "clips": [
+        {
+            "id": "clip1",
+            "title": "Intro + Whatever you want",
+            "begin": 0,
+            "end": 200000,
+            "type": "core_audio",
+            "receiver": "audio1",
+            "clip_parameters": {},
+            "transformations": {}
+        },
+        {
+            "id": "clip2",
+            "title": "Green horiz line from top down",
+            "begin": 0,
+            "end": 7490,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": -50,
+                    "80": 50
+                },
+                "g": {
+                    "0": 0,
+                    "5": 100,
+                    "70": 100,
+                    "100": 0
+                }
+            }
+        },
+        {
+            "id": "clip3",
+            "title": "Red vert line from left to right",
+            "begin": 6510,
+            "end": 10000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 1
+            },
+            "transformations": {
+                "x": {
+                    "0": -50,
+                    "100": 50
+                },
+                "y": {
+                    "0": 0
+                },
+                "r": {
+                    "0": 0,
+                    "5": 100,
+                    "70": 100,
+                    "100": 0
+                }
+            }
+        },
+        {
+            "id": "clip4",
+            "title": "Blue circle",
+            "begin": 10150,
+            "end": 12000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "b": {
+                    "0": 5,
+                    "70": 100,
+                    "100": 0
+                },
+                "s": {
+                    "0": 5,
+                    "100": 30
+                }
+            }
+        },
+        {
+            "id": "clip5",
+            "title": "Red circle",
+            "begin": 12500,
+            "end": 14000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "r": {
+                    "0": 5,
+                    "70": 100,
+                    "100": 0
+                },
+                "b": {
+                    "0": 0
+                },
+                "s": {
+                    "0": 5,
+                    "100": 30
+                }
+            }
+        },
+        {
+            "id": "clip6",
+            "title": "horiz line from bottom up",
+            "begin": 14280,
+            "end": 17400,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": 50,
+                    "80": -50
+                },
+                "g": {
+                    "0": 0,
+                    "10": 80,
+                    "70": 80,
+                    "100": 0
+                }
+            }
+        },
+        {
+            "id": "clip7",
+            "title": "horiz line from bottom up",
+            "begin": 15300,
+            "end": 18420,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": 50,
+                    "80": -50
+                },
+                "r": {
+                    "0": 80
+                },
+                "g": {
+                    "0": 0
+                },
+                "b": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "id": "clip8",
+            "title": "horiz line from bottom up",
+            "begin": 15900,
+            "end": 18420,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": 50,
+                    "80": -50
+                },
+                "r": {
+                    "0": 30
+                },
+                "g": {
+                    "0": 0
+                },
+                "b": {
+                    "0": 100
+                }
+            }
+        },
+        {
+            "id": "clip9",
+            "title": "horiz line from bottom up",
+            "begin": 16390,
+            "end": 18910,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": 50,
+                    "80": -50
+                },
+                "r": {
+                    "0": 100
+                },
+                "g": {
+                    "0": 0
+                },
+                "b": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "id": "clip10",
+            "title": "horiz line from bottom up",
+            "begin": 16930,
+            "end": 19530,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": 50,
+                    "80": -50
+                },
+                "r": {
+                    "0": 0
+                },
+                "g": {
+                    "0": 1
+                },
+                "b": {
+                    "0": 100
+                }
+            }
+        },
+        {
+            "id": "clip11",
+            "title": "horiz line from bottom up",
+            "begin": 17450,
+            "end": 19950,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": 50,
+                    "80": -50
+                },
+                "r": {
+                    "0": 0
+                },
+                "g": {
+                    "0": 80
+                },
+                "b": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "id": "clip12",
+            "title": "horiz line from top down",
+            "begin": 18500,
+            "end": 27500,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": -50,
+                    "80": 50
+                },
+                "r": {
+                    "0": 0
+                },
+                "g": {
+                    "0": 100
+                },
+                "b": {
+                    "0": 0
+                },
+                "dots": {
+                    "0": 15
+                }
+            }
+        },
+        {
+            "id": "clip13",
+            "title": "moving wave from l to r",
+            "begin": 26000,
+            "end": 55000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 4
+            },
+            "transformations": {
+                "amplitude": {
+                    "0": 500,
+                    "70": 600,
+                    "80": 1200
+                },
+                "frequency": {
+                    "0": 0.4
+                },
+                "r": {
+                    "0": 0
+                },
+                "g": {
+                    "0": 0
+                },
+                "b": {
+                    "0": 0,
+                    "10": 100,
+                    "99": 100,
+                    "100": 0
+                }
+            }
+        },
+        {
+            "id": "clip14",
+            "title": "horiz line from bottom up",
+            "begin": 55000,
+            "end": 57000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": 50,
+                    "100": -50
+                },
+                "g": {
+                    "0": 100
+                },
+                "dots": {
+                    "0": 10
+                }
+            }
+        },
+        {
+            "id": "clip15",
+            "title": "Growing circle",
+            "begin": 57000,
+            "end": 57500,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "r": {
+                    "0": 100
+                },
+                "g": {
+                    "0": 100
+                },
+                "b": {
+                    "0": 100
+                },
+                "s": {
+                    "0": 10,
+                    "100": 15
+                },
+                "dots": {
+                    "0": 5
+                }
+            }
+        },
+        {
+            "id": "clip16",
+            "title": "horiz line from bottom up",
+            "begin": 57700,
+            "end": 59200,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": 50,
+                    "100": -50
+                },
+                "g": {
+                    "0": 100
+                },
+                "dots": {
+                    "0": 10
+                }
+            }
+        },
+        {
+            "id": "clip17",
+            "title": "Growing circle",
+            "begin": 59200,
+            "end": 59700,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "r": {
+                    "0": 100
+                },
+                "g": {
+                    "0": 100
+                },
+                "b": {
+                    "0": 100
+                },
+                "s": {
+                    "0": 10,
+                    "100": 20
+                },
+                "dots": {
+                    "0": 5
+                }
+            }
+        },
+        { 
+            "id": "clip15",
+            "title": "horiz line from bottom up",
+            "begin": 59700,
+            "end": 61700,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": 50,
+                    "100": -50
+                },
+                "g": {
+                    "0": 100
+                },
+                "dots": {
+                    "0": 10
+                }
+            }
+        },
+        {
+            "id": "clip16",
+            "title": "Growing circle",
+            "begin": 61700,
+            "end": 62200,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "r": {
+                    "0": 100
+                },
+                "g": {
+                    "0": 100
+                },
+                "b": {
+                    "0": 100
+                },
+                "s": {
+                    "0": 10,
+                    "100": 30
+                },
+                "dots": {
+                    "0": 5
+                }
+            }
+        },
+        {
+            "id": "clip17",
+            "title": "horiz line from bottom up",
+            "begin": 62400,
+            "end": 63900,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": 50,
+                    "100": -50
+                },
+                "g": {
+                    "0": 100
+                },
+                "dots": {
+                    "0": 10
+                }
+            }
+        },
+        {
+            "id": "clip18",
+            "title": "Growing circle",
+            "begin": 63900,
+            "end": 64400,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "r": {
+                    "0": 100
+                },
+                "g": {
+                    "0": 100
+                },
+                "b": {
+                    "0": 100
+                },
+                "s": {
+                    "0": 10,
+                    "100": 40
+                },
+                "dots": {
+                    "0": 5
+                }
+            }
+        },
+        {
+            "id": "clip19",
+            "title": "Green horiz line from top down",
+            "begin": 64400,
+            "end": 70000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 0
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": -50,
+                    "80": 50
+                },
+                "g": {
+                    "0": 0,
+                    "5": 100,
+                    "70": 100,
+                    "100": 0
+                },
+                "dots": {
+                    "0": 10
+                }
+            }
+        },
+        {
+            "id": "clip20",
+            "title": "herri",
+            "begin": 78000,
+            "end": 95000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 5,
+                "path": "herri.svg"
+            },
+            "transformations": {
+                "y": {
+                    "0": -20
+                },
+                "s": {
+                    "0": 1,
+                    "100": 8
+                },
+                "rotate": {
+                    "0": -30,
+                    "100": 30
+                },
+                "g": {
+                    "0": 0,
+                    "10": 100,
+                    "70": 100,
+                    "100": 0
+                }
+            }
+        },
+        {
+            "id": "clip20-2",
+            "title": "70",
+            "begin": 90000,
+            "end": 114000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 5,
+                "path": "70.svg"
+            },
+            "transformations": {
+                "y": {
+                    "0": -20
+                },
+                "s": {
+                    "0": 1,
+                    "100": 8
+                },
+                "rotate": {
+                    "0": 30,
+                    "100": -30
+                },
+                "r": {
+                    "0": 0,
+                    "10": 100,
+                    "90": 100,
+                    "100": 0
+                },
+                "g": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "id": "clip21",
+            "title": "guitar flickering",
+            "begin": 115000,
+            "end": 145000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 5,
+                "path": "guitar.svg"
+            },
+            "transformations": {
+                "x": {
+                    "0": -70,
+                    "100": 60
+                },
+                "y": {
+                    "0": -20
+                },
+                "s": {
+                    "0": 2,
+                    "100": 4
+                },
+                "rotate": {
+                    "0": 75,
+                    "100": 1800
+                },
+                "r": {
+                    "0": 0,
+                    "10": 100,
+                    "95": 100,
+                    "100": 0
+                },
+                "g": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "id": "clip22",
+            "title": "triangle bottom to up",
+            "begin": 144500,
+            "end": 150000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 5,
+                "path": "triangle.svg"
+            },
+            "transformations": {
+                "x": {
+                    "0": -20,
+                    "100": 20
+                },
+                "y": {
+                    "0": 100,
+                    "100": -90
+                },
+                "s": {
+                    "0": 5,
+                    "100": 2
+                },
+                "rotate": {
+                    "0": -75,
+                    "100": -180
+                },
+                "r": {
+                    "0": 0,
+                    "10": 100
+                },
+                "g": {
+                    "0": 100,
+                    "10": 0
+                },
+                "b": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "id": "clip23",
+            "title": "2nd triangle bottom to up",
+            "begin": 146000,
+            "end": 152000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 5,
+                "path": "triangle.svg"
+            },
+            "transformations": {
+                "x": {
+                    "0": 70,
+                    "100": -20
+                },
+                "y": {
+                    "0": 100,
+                    "100": -90
+                },
+                "s": {
+                    "0": 5,
+                    "100": 2
+                },
+                "rotate": {
+                    "0": -75,
+                    "100": -180
+                },
+                "g": {
+                    "0": 0,
+                    "10": 100
+                },
+                "r": {
+                    "0": 100,
+                    "10": 0
+                },
+                "b": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "id": "clip24",
+            "title": "3rd triangle bottom to up",
+            "begin": 148000,
+            "end": 155000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 5,
+                "path": "triangle.svg"
+            },
+            "transformations": {
+                "x": {
+                    "0": -20,
+                    "100": 50
+                },
+                "y": {
+                    "0": 100,
+                    "100": -90
+                },
+                "s": {
+                    "0": 5,
+                    "100": 2
+                },
+                "rotate": {
+                    "0": -75,
+                    "100": -180
+                },
+                "g": {
+                    "0": 100
+                },
+                "r": {
+                    "0": 100
+                },
+                "b": {
+                    "0": 100
+                }
+            }
+        },
+        {
+            "id": "clip25",
+            "title": "triangle bottom to up",
+            "begin": 149000,
+            "end": 156000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 5,
+                "path": "triangle.svg"
+            },
+            "transformations": {
+                "x": {
+                    "0": -20,
+                    "100": 20
+                },
+                "y": {
+                    "0": 100,
+                    "100": -90
+                },
+                "s": {
+                    "0": 5,
+                    "100": 2
+                },
+                "rotate": {
+                    "0": -75,
+                    "100": -180
+                },
+                "r": {
+                    "0": 0,
+                    "10": 100
+                },
+                "g": {
+                    "0": 100,
+                    "10": 0
+                },
+                "b": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "id": "clip26",
+            "title": "3rd triangle bottom to up",
+            "begin": 150000,
+            "end": 159000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 5,
+                "path": "triangle.svg"
+            },
+            "transformations": {
+                "x": {
+                    "0": 80,
+                    "100": -20
+                },
+                "y": {
+                    "0": 100,
+                    "100": -90
+                },
+                "s": {
+                    "0": 5,
+                    "100": 2
+                },
+                "rotate": {
+                    "0": -75,
+                    "100": -180
+                },
+                "g": {
+                    "0": 0
+                },
+                "r": {
+                    "0": 100
+                },
+                "b": {
+                    "0": 100
+                }
+            }
+        },
+        {
+            "id": "clip27",
+            "title": "book",
+            "begin": 159000,
+            "end": 167000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 5,
+                "path": "book.svg"
+            },
+            "transformations": {
+                "x": {
+                    "0": -20,
+                    "100": 20
+                },
+                "y": {
+                    "0": 0
+                },
+                "s": {
+                    "0": 1,
+                    "100": 15
+                },
+                "rotate": {
+                    "0": 0
+                },
+                "r": {
+                    "0": 100
+                },
+                "g": {
+                    "0": 0
+                }
+            }
+        },
+        {
+            "id": "clip28",
+            "title": "bicycle",
+            "begin": 167000,
+            "end": 174000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 5,
+                "path": "bicycle2.svg"
+            },
+            "transformations": {
+                "x": {
+                    "0": -20,
+                    "100": 20
+                },
+                "y": {
+                    "0": 0
+                },
+                "s": {
+                    "0": 1,
+                    "100": 15
+                },
+                "rotate": {
+                    "0": 0
+                },
+                "r": {
+                    "0": 100,
+                    "90": 100,
+                    "100": 0
+                },
+                "g": {
+                    "0": 100,
+                    "90": 100,
+                    "100": 0
+                }
+            }
+        },
+        {
+            "id": "clip29",
+            "title": "circle",
+            "begin": 174000,
+            "end": 180000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "x": {
+                    "0": 0
+                },
+                "y": {
+                    "0": -50,
+                    "100": 50
+                },
+                "s": {
+                    "0": 30,
+                    "100": 5
+                },
+                "b": {
+                    "0": 100,
+                    "90": 100,
+                    "100": 0
+                }
+            }
+        },
+        {
+            "id": "clip30",
+            "title": "circle",
+            "begin": 176000,
+            "end": 180000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "x": {
+                    "0": 30,
+                    "100": -30
+                },
+                "y": {
+                    "0": -50,
+                    "100": 50
+                },
+                "s": {
+                    "0": 50,
+                    "100": 5
+                },
+                "r": {
+                    "0": 100,
+                    "90": 100,
+                    "100": 0
+                },
+                "b": {
+                    "0": 100,
+                    "90": 100,
+                    "100": 0
+                }
+            }
+        },
+        {
+            "id": "clip31",
+            "title": "circle",
+            "begin": 178000,
+            "end": 183000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "x": {
+                    "0": 20,
+                    "100": -20
+                },
+                "y": {
+                    "0": -50,
+                    "100": 50
+                },
+                "s": {
+                    "0": 30,
+                    "100": 10
+                },
+                "g": {
+                    "0": 100,
+                    "90": 100,
+                    "100": 0
+                },
+                "b": {
+                    "0": 100,
+                    "90": 100,
+                    "100": 0
+                }
+            }
+        },
+        {
+            "id": "clip32",
+            "title": "circle",
+            "begin": 181000,
+            "end": 187000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "x": {
+                    "0": -40,
+                    "100": 20
+                },
+                "y": {
+                    "0": -50,
+                    "100": 50
+                },
+                "s": {
+                    "0": 50,
+                    "100": 30
+                },
+                "r": {
+                    "0": 100,
+                    "90": 100,
+                    "100": 0
+                },
+                "g": {
+                    "0": 100,
+                    "90": 100,
+                    "100": 0
+                }
+            }
+        },
+        {
+            "id": "clip33",
+            "title": "circle",
+            "begin": 183000,
+            "end": 188000,
+            "type": "core_laser_helios",
+            "receiver": "laser_group1",
+            "clip_parameters": {
+                "laser_object": 3
+            },
+            "transformations": {
+                "x": {
+                    "0": 40,
+                    "100": -20
+                },
+                "y": {
+                    "0": -50,
+                    "100": 50
+                },
+                "s": {
+                    "0": 20,
+                    "100": 15
+                },
+                "r": {
+                    "0": 0
+                },
+                "g": {
+                    "0": 100,
+                    "90": 100,
+                    "100": 0
+                },
+                "b": {
+                    "0": 0
+                }
+            }
+        }
+    ]
+}
