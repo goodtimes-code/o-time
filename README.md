@@ -1,6 +1,11 @@
 # o-time!
 You can run a great timeline-based multimedia show (lasershow, lightshow,...) with *o-time!*, firing all your media clips with optional effects at the right time. Should work on all operating systems (Windows, MacOS, Linux) thanks to Python programming language.
 
+# Sponsor
+![Sponsor: www.goodtimes.technology](https://static.wixstatic.com/media/b3893c_87d7a8ac22ef46e1aa0c2f8b606985c7~mv2.png/v1/fill/w_404,h_100,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b3893c_87d7a8ac22ef46e1aa0c2f8b606985c7~mv2.png)
+
+Sponsored by https://www.goodtimes.technology
+
 # Demo
 Watch a demo video here: https://youtu.be/FjxbE_0uRM8
 
